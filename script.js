@@ -1,6 +1,6 @@
 async function populate() {
 
-    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEFT774TWHM5ZKUEVIAZEYRATA';
+    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEF4N2TW6CB3Q4A6T76ZEYRG6A';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -25,9 +25,9 @@ async function populate() {
 
   function populateHeroes(obj) {
     const section = document.querySelector('section');
-    const heroes = obj.parts;
+    const blocks = obj.parts;
 
-    for (const hero of heroes) {
+    for (const block of blocks) {
       const myArticle = document.createElement('article');
       const myH2 = document.createElement('h2');
       const myPara1 = document.createElement('p');
@@ -35,12 +35,12 @@ async function populate() {
       const myPara3 = document.createElement('p');
       const myList = document.createElement('ul');
 
-      myH2.textContent = hero.name;
-      myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
-      myPara2.textContent = `${content}`;
+      myH2.textContent = block.name;
+      myPara1.textContent = `Secret identity: ${block.secretIdentity}`;
+      myPara2.textContent = `Content : ${block.content}`;
       myPara3.textContent = 'Superpowers:';
 
-      const superPowers = hero.powers;
+      const superPowers = block.powers;
       for (const power of superPowers) {
         const listItem = document.createElement('li');
         listItem.textContent = power;
