@@ -1,40 +1,17 @@
 {
-  "squadName" : "Super Hero Squad",
-  "homeTown" : "Metro City",
-  "formed" : 2016,
-  "secretBase" : "Super tower",
+  "songName" : "Aun no Beats",
+  "creator" : "Hanyuu Maigo",
+  "formed" : "08/19/2017",
   "active" : true,
-  "members" : [
+  "parts" : [
     {
-      "name" : "Molecule Man",
-      "age" : 29,
+      "name" : "part1",
+      "content" : "みんなどっか行っちゃったよ \n 零になっちゃってざまぁないね \n 信じてたいから声に出すのはやめた \n 愛されたいのはどうして？ \n 愛してたいのはどうして？ \n 飾りあって 分かち合っていた",
       "secretIdentity" : "Dan Jukes",
       "powers" : [
         "Radiation resistance",
         "Turning tiny",
         "Radiation blast"
-      ]
-    },
-    {
-      "name" : "Madame Uppercut",
-      "age" : 39,
-      "secretIdentity" : "Jane Wilson",
-      "powers" : [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name" : "Eternal Flame",
-      "age" : 1000000,
-      "secretIdentity" : "Unknown",
-      "powers" : [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
       ]
     }
   ]

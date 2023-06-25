@@ -1,6 +1,6 @@
 async function populate() {
 
-    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEFDAHJJOQS545CAN7EZEYNFRA';
+    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEETQYGA7UT5DZHWM5EZEYPX6Q';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -15,11 +15,11 @@ async function populate() {
   function populateHeader(obj) {
     const header = document.querySelector('header');
     const myH1 = document.createElement('h1');
-    myH1.textContent = obj.squadName;
+    myH1.textContent = obj.songName;
     header.appendChild(myH1);
 
     const myPara = document.createElement('p');
-    myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+    myPara.textContent = `Creator: ${obj.creator} // Formed: ${obj.formed}`;
     header.appendChild(myPara);
   }
 
@@ -37,7 +37,7 @@ async function populate() {
 
       myH2.textContent = hero.name;
       myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
-      myPara2.textContent = `Age: ${hero.age}`;
+      myPara2.textContent = `${content}`;
       myPara3.textContent = 'Superpowers:';
 
       const superPowers = hero.powers;
