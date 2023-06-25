@@ -1,0 +1,19 @@
+{
+    "kanji": [
+        {
+            "JLPT N5": [
+                {
+                    "vocabulary": "行く",
+                    "value":"いく", 
+                    "translation": "to go; to move (towards)",
+                    "iterations": ["行っちゃった"]
+                },
+                {
+                    "vocabulary": "零",
+                    "value":"ゼロ", 
+                    "translation": "zero; nought"
+                }
+            ]
+        }
+    ] 
+}

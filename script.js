@@ -1,6 +1,6 @@
 async function populate() {
 
-    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEFLW2LLUPK2P4Z5RA4ZEYRLDA';
+    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEE53P57YP76SIIVZD2ZEYRR6Q';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -33,7 +33,7 @@ async function populate() {
       const myPara1 = document.createElement('p');
       const myPara2 = document.createElement('p');
       const myPara3 = document.createElement('p');
-      const myList = document.createElement('ul');
+      const myList = document.createElement('p');
 
       myH2.textContent = block.name;
       myPara1.textContent = `Secret identity: ${block.secretIdentity}`;
@@ -42,7 +42,7 @@ async function populate() {
 
       const superPowers = block.powers;
       for (const power of superPowers) {
-        const listItem = document.createElement('li');
+        const listItem = document.createElement('p');
         listItem.textContent = power;
         myList.appendChild(listItem);
       }
