@@ -1,6 +1,6 @@
 async function populate() {
 
-    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEF4N2TW6CB3Q4A6T76ZEYRG6A';
+    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEFLW2LLUPK2P4Z5RA4ZEYRLDA';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -37,7 +37,7 @@ async function populate() {
 
       myH2.textContent = block.name;
       myPara1.textContent = `Secret identity: ${block.secretIdentity}`;
-      myPara2.textContent = `Content : ${block.content}`;
+      myPara2.textContent = `${block.content}`;
       myPara3.textContent = 'Superpowers:';
 
       const superPowers = block.powers;
