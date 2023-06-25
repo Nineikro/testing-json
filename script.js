@@ -1,83 +1,57 @@
-/*
-const container = document.querySelector('#container');
-const body = document.querySelector("body");
+async function populate() {
+    const requestURL = 'kanji.json'
+    const request = new Request(requestURL);
 
-const content = document.createElement('div'); //creates a new div
-content.classList.add('content'); //adds class content to div
-content.textContent = 'This is the glorious text-content!'; //adds text to content div
+    const response = await fetch(request);
+    const superHeroes = await response.json();
 
-container.appendChild(content); //sends to html content div
-
-const paragraph = document.createElement('p');
-paragraph.setAttribute ('style', 'color:red');
-paragraph.textContent = 'Hey, im red';
-
-body.appendChild(paragraph);
-
-const heading_3 = document.createElement('h3');
-heading_3.setAttribute ('style', 'color:blue');
-heading_3.textContent = 'im a blue h3 :D';
-
-body.appendChild(heading_3);
-
-const content2 = document.createElement('div');
-content2.setAttribute ('style', 'background-color:pink; border: 2px solid black');
-
-body.appendChild(content2);
-
-const heading1 = document.createElement('h1');
-heading1.textContent = 'im in a div'
-
-content2.appendChild(heading1);
-
-const paragraph2 = document.createElement('p');
-paragraph2.textContent = 'ME TOO OMG'
-
-content2.appendChild(paragraph2);
-
-//---------------------------------------------------------
-
-const array = {
-    kanji1: "垂れ",
-    value1: "たれ",
-    kanji2: "兄ちゃん",
-    value2: "にいちゃん",
+    populateHeader(superHeroes);
+    populateHeroes(superHeroes);
 }
 
-const musicContent = document.createElement('div');
+function populateHeader(obj) {
+    const header = document.querySelector('header');
+    const myH1 = document.createElement('h1');
+    myH1.textContent = obj.squadName;
+    header.appendChild(myH1);
 
-body.appendChild(musicContent);
+    const myPara = document.createElement('p');
+    myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+    header.appendChild(myPara);
+  }
 
-const pt1 = document.createElement('div');
-pt1.classList.add('pt1');
-pt1.textContent = 
-`よう うな ${array[1]} てるその兄ちゃん
-何か辛い事あったんか？
-俺で良けりゃ話してくんない？
-力になるぜ`
+function populateHeroes(obj) {
+const section = document.querySelector('section');
+const heroes = obj.members;
 
-musicContent.appendChild(pt1)
+for (const hero of heroes) {
+    const myArticle = document.createElement('article');
+    const myH2 = document.createElement('h2');
+    const myPara1 = document.createElement('p');
+    const myPara2 = document.createElement('p');
+    const myPara3 = document.createElement('p');
+    const myList = document.createElement('ul');
 
-// -------------------------------------------------------
+    myH2.textContent = hero.name;
+    myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
+    myPara2.textContent = `Age: ${hero.age}`;
+    myPara3.textContent = 'Superpowers:';
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle('show');
-}
-
-// -------------------------------------------------------
-*/
-
-const kanjiJLPT5 = ["学校", "川", "手", '戸', "眼鏡", "煙草"];
-
-const filter = kanjiJLPT5.filter(myFunction)
-let i = document.getElementById('3').id 
-let len = kanjiJLPT5.length
-i = ''
-
-function myFunction (value, index, array) {
-    if (i === len) {
-        return i
+    const superPowers = hero.powers;
+    for (const power of superPowers) {
+    const listItem = document.createElement('li');
+    listItem.textContent = power;
+    myList.appendChild(listItem);
     }
+
+    myArticle.appendChild(myH2);
+    myArticle.appendChild(myPara1);
+    myArticle.appendChild(myPara2);
+    myArticle.appendChild(myPara3);
+    myArticle.appendChild(myList);
+
+    section.appendChild(myArticle);
+}
 }
 
-console.log(text)
+populate();
