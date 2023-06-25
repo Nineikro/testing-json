@@ -13,6 +13,16 @@
         "Turning tiny",
         "Radiation blast"
       ]
+    },
+    {
+      "name" : "part2",
+      "content" : "（ずっとこれからだったのに） \n それでも それでも それでも \n 「貴方から言ってくださいね」",
+      "secretIdentity" : "an ukes",
+      "powers" : [
+        "Rad res",
+        "tiny",
+        "diat ast"
+      ]
     }
   ]
 }

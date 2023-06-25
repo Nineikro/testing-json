@@ -1,6 +1,6 @@
 async function populate() {
 
-    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEETQYGA7UT5DZHWM5EZEYPX6Q';
+    const requestURL = 'https://raw.githubusercontent.com/Nineikro/testing-json/main/kanji.json?token=GHSAT0AAAAAACDJPAEFT774TWHM5ZKUEVIAZEYRATA';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -25,7 +25,7 @@ async function populate() {
 
   function populateHeroes(obj) {
     const section = document.querySelector('section');
-    const heroes = obj.members;
+    const heroes = obj.parts;
 
     for (const hero of heroes) {
       const myArticle = document.createElement('article');
