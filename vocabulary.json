@@ -3,10 +3,9 @@
         {
             "JLPT N5": [
                 {
-                    "vocabulary": "行く",
-                    "value":"いく", 
-                    "translation": "to go; to move (towards)",
-                    "iterations": ["行っちゃった"]
+                    "vocabulary": "行っちゃった",
+                    "value":"いっちゃった", 
+                    "translation": "went to (towards)"
                 },
                 {
                     "vocabulary": "零",
