@@ -27,5 +27,17 @@
         "diat ast"
       ]
     }
+  ],
+    "kanji": [
+      {
+        "vocabulary": "行っちゃった",
+        "value":"いっちゃった", 
+        "translation": "went to (towards)"
+      },
+      {
+        "vocabulary": "零",
+        "value":"ゼロ", 
+        "translation": "zero; nought"
+      }
   ]
 }
